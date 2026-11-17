@@ -1,0 +1,34 @@
+[
+  {
+    "recipe": "cinematic_life",
+    "name": "电影人生",
+    "file": "profiles/电影人生.xmp",
+    "base": "A9III Native Linear Base v1",
+    "signature": "346213d81d18",
+    "uuid": "71F0A9D4DEC511AD760495357BB0EC5B"
+  },
+  {
+    "recipe": "urban_stroll",
+    "name": "都市漫游",
+    "file": "profiles/都市漫游.xmp",
+    "base": "A9III Native Linear Base v1",
+    "signature": "d30ffde96aaf",
+    "uuid": "15BEEF652B03A4F9438C6E0C73566DC7"
+  },
+  {
+    "recipe": "lucid_cyan",
+    "name": "澄青",
+    "file": "profiles/澄青.xmp",
+    "base": "A9III Native Linear Base v1",
+    "signature": "270c0592cc10",
+    "uuid": "90E767FC81A5A8B63D0EE6B5B3B5A725"
+  },
+  {
+    "recipe": "light_seeker",
+    "name": "追光者",
+    "file": "profiles/追光者.xmp",
+    "base": "A9III Native Linear Base v1",
+    "signature": "debfcafb0e4d",
+    "uuid": "216691F78293A5D9E5FF8E8DF371EF2D"
+  }
+]

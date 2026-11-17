@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.DS_Store
+.venv/
+*.ARW
+*.arw
+*.JPG
+*.jpg
+*.lrcat*
+personal/
+reports/
+cache/

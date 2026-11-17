@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "sony-ilce-9m3",
+  "model": "ILCE-9M3",
+  "dcp_model": "Sony ILCE-9M3",
+  "adobe_profile_filename": "Sony ILCE-9M3 Adobe Standard.dcp",
+  "base_name": "A9III Native Linear Base v1",
+  "base_mode": "linear_from_adobe",
+  "reader": "sony_makernote",
+  "maker_note_prefix": "SONY",
+  "maker_note_skip": 12,
+  "style_tag": 45088,
+  "fields": {
+    "contrast": 8196,
+    "highlights": 8243,
+    "shadows": 8242,
+    "fade": 8244,
+    "saturation": 8197,
+    "sharpness": 8198,
+    "sharpness_range": 8245,
+    "clarity": 8246
+  },
+  "signature_engine": "sony_sr2_v1",
+  "renderer": "sony_sr2",
+  "validation": {
+    "status": "reference_verified",
+    "firmware": [
+      "4.00"
+    ],
+    "environment": "macOS15.8.3 / LRC16.0",
+    "metadata_pairs": 4,
+    "lrc_import_applied": 4,
+    "color_coverage": "单一室内拍摄条件。跨光照效果需要新增样本验证。"
+  }
+}

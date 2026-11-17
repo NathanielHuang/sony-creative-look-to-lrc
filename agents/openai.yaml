@@ -1,0 +1,3 @@
+interface:
+  display_name: "Sony Creative Look to LRC"
+  short_description: "Build Lightroom Classic profiles and a matching plugin from Sony Creative Look samples"

@@ -1,0 +1,452 @@
+[
+  {
+    "file": ".gitignore",
+    "bytes": 95,
+    "sha256": "7c3268b74c45110eeba95d9522608281d7128c3d7e727730ef2bb089e173aac9"
+  },
+  {
+    "file": "GETTING_STARTED.md",
+    "bytes": 2292,
+    "sha256": "f4502291e788ca7a76ae27abe03abe89474f7cc550463ee407b4a50e4695ccde"
+  },
+  {
+    "file": "LICENSE",
+    "bytes": 1213,
+    "sha256": "4b1c65dfbc00ca460ed38017d1c66fb56b727ffb1465195081469015443ebd83"
+  },
+  {
+    "file": "README.md",
+    "bytes": 1308,
+    "sha256": "98859734e9ba4ed8ae48da8408e1f26ef1af946e09e7721e677c07c0a913e9b7"
+  },
+  {
+    "file": "README.zh-CN.md",
+    "bytes": 812,
+    "sha256": "f18e15fca6e53e6639dd608c2861e24a3aadebb40fa477dbb5bd6b491a378e42"
+  },
+  {
+    "file": "SKILL.md",
+    "bytes": 4115,
+    "sha256": "062284bfad9a2899e01e3e99460b4caae979c312e1ed9782c7fc92a575b3e177"
+  },
+  {
+    "file": "SKILL.zh-CN.md",
+    "bytes": 3618,
+    "sha256": "8469088825cfa7937dbe94b950198404371d92ad9e7ee243c1c83cc0d3fd26e2"
+  },
+  {
+    "file": "THIRD_PARTY.en.md",
+    "bytes": 874,
+    "sha256": "82da33c41645a1ee54a943ac4905f5d55d087c9466d6ef43056c229e09346102"
+  },
+  {
+    "file": "THIRD_PARTY.md",
+    "bytes": 718,
+    "sha256": "d939db2d9be9a9e84263ee3f709ea12202c16df6881f6d1eb484e32526e2ddef"
+  },
+  {
+    "file": "adapters/sony-ilce-9m3/adapter.json",
+    "bytes": 912,
+    "sha256": "9181a0f4d2ae9599162118c745cb921f97f0253a18f9e96aff06144999f5f022"
+  },
+  {
+    "file": "adapters/sony-ilce-9m3/profiles/澄青.xmp",
+    "bytes": 1891974,
+    "sha256": "2ce30c5bb4e206559c98a1d5fd6266180ca566bd60e0be07813e99929d067273"
+  },
+  {
+    "file": "adapters/sony-ilce-9m3/profiles/电影人生.xmp",
+    "bytes": 1859935,
+    "sha256": "4f38e536e6ff34e14f4f9173914c985a876a9a3063cf9bd8e5618630278ea46e"
+  },
+  {
+    "file": "adapters/sony-ilce-9m3/profiles/追光者.xmp",
+    "bytes": 1839220,
+    "sha256": "56208d04506f297276e7c1c41aca812b21cf84d79b75b47400df5b48a4ab4acb"
+  },
+  {
+    "file": "adapters/sony-ilce-9m3/profiles/都市漫游.xmp",
+    "bytes": 1887880,
+    "sha256": "36a121197684c7e2adbed812b65e59799c6646e8ce8ad0a8e0e1aa3e05383531"
+  },
+  {
+    "file": "adapters/sony-ilce-9m3/profiles.json",
+    "bytes": 908,
+    "sha256": "b8cd759a7285ee653c290f0eccf0a8b8e1a66e28c23365fde6e0cb66f3d0d03a"
+  },
+  {
+    "file": "adapters/sony-ilce-9m3/recipes.json",
+    "bytes": 785,
+    "sha256": "b92f1a89926051171e9dd8b4d5e3b75c0c2088448059b3d3930e680fc52a1f3a"
+  },
+  {
+    "file": "agents/openai.yaml",
+    "bytes": 165,
+    "sha256": "66158139feacc9ace1a2a49098bad378375b1a07f130b20e1b547ace6c02d5a8"
+  },
+  {
+    "file": "assets/project/SonyLooks.lrplugin/ApplyCurrent.lua",
+    "bytes": 583,
+    "sha256": "0221423b379722ad1c0cc27dc3d9e490cf23d03e98552e160a61c678a8ff9715"
+  },
+  {
+    "file": "assets/project/SonyLooks.lrplugin/ApplyEngine.lua",
+    "bytes": 3536,
+    "sha256": "71f00fb964188ce0f116710e13e8b4c6b762a41a949afd1ef5d0fa6d9ac71c61"
+  },
+  {
+    "file": "assets/project/SonyLooks.lrplugin/AutoStart.lua",
+    "bytes": 2688,
+    "sha256": "393482f74141bbdd86a43eb7abe3e6d6ef61d91b98c8360e5d7f067ac16dbc7d"
+  },
+  {
+    "file": "assets/project/SonyLooks.lrplugin/AutoStop.lua",
+    "bytes": 61,
+    "sha256": "ebfa8d817f79c8465b90c0e165578bcd5b26fc4b74e5f6c559e767fe9691be0a"
+  },
+  {
+    "file": "assets/project/SonyLooks.lrplugin/AutoToggle.lua",
+    "bytes": 398,
+    "sha256": "bfc0066bd5f60c410e2de2602cf62e201aeba12b7bd6f9e72efc232c5cda7997"
+  },
+  {
+    "file": "assets/project/SonyLooks.lrplugin/Config.lua",
+    "bytes": 26,
+    "sha256": "a35d3b51370aa7e6c5c21f9e64d976674ffb462d05341a1b20b8b8e34f75790b"
+  },
+  {
+    "file": "assets/project/SonyLooks.lrplugin/Info.lua",
+    "bytes": 593,
+    "sha256": "fe0791cae83eec35601a6259911c6b1e72fbc1f6618f968d366a9d59137cbde9"
+  },
+  {
+    "file": "assets/project/SonyLooks.lrplugin/Match.lua",
+    "bytes": 3416,
+    "sha256": "cd0b9e6f927fed37afc2d07b47c828185243b6f63583445772c712b01f291a0f"
+  },
+  {
+    "file": "assets/project/SonyLooks.lrplugin/Status.lua",
+    "bytes": 376,
+    "sha256": "6d68146066adeb63febe32420ee66178b72866c130bb22e6ef73b1ff2e96e6dd"
+  },
+  {
+    "file": "assets/project/SonyLooks.lrplugin/Util.lua",
+    "bytes": 1527,
+    "sha256": "99a31fbfdcac0836621703954a90b2dec510caa0b9a894353292a1f08517b1e4"
+  },
+  {
+    "file": "assets/project/SonyLooks.lrplugin/core/base_profile.py",
+    "bytes": 3306,
+    "sha256": "b54b714f4d2af356f82e12680f3f318860c5ae88813f78f9070bcf794818ce4c"
+  },
+  {
+    "file": "assets/project/SonyLooks.lrplugin/core/bridge.py",
+    "bytes": 2508,
+    "sha256": "c6c59674ba92ece045fcf6bb0ae70c01c8ea014636dccffc828c9e6089f110f1"
+  },
+  {
+    "file": "assets/project/SonyLooks.lrplugin/core/build_profiles.py",
+    "bytes": 3654,
+    "sha256": "ead770f93c862ad962c36bdbafbbb20fd7385d5649c426d4f80aafe2faa52ccf"
+  },
+  {
+    "file": "assets/project/SonyLooks.lrplugin/core/config.py",
+    "bytes": 287,
+    "sha256": "5fe64211c57b055d2bbb6822713e2629dc9e072302f963d95773b0bc46e867fa"
+  },
+  {
+    "file": "assets/project/SonyLooks.lrplugin/core/metadata.py",
+    "bytes": 3795,
+    "sha256": "b72295417e0671ac5f315ca573fe54ac769e78313e468abe4ffa0ef6ca9531f9"
+  },
+  {
+    "file": "assets/project/SonyLooks.lrplugin/core/native_signature.py",
+    "bytes": 735,
+    "sha256": "70700dd6f2a20d8df5ad6043d8db3e565d620d8bb857c822644265f15f058b54"
+  },
+  {
+    "file": "assets/project/SonyLooks.lrplugin/core/paths.py",
+    "bytes": 245,
+    "sha256": "8f9343aebfa2da56f040becf441e7f9ab93172c75482e1f0070c8ae02d6698a6"
+  },
+  {
+    "file": "assets/project/SonyLooks.lrplugin/core/prepare_sidecars.py",
+    "bytes": 2907,
+    "sha256": "fa8d56c304238962b225f4b73e403f18dd23e63708d1dc45dc70e8ed2347c1eb"
+  },
+  {
+    "file": "assets/project/SonyLooks.lrplugin/core/xmp_merge.py",
+    "bytes": 5453,
+    "sha256": "85f0d1c7b0069e9fb1c7db24da73c7b1cde303f4b433d5fc67fc9a26b12f6d98"
+  },
+  {
+    "file": "assets/project/SonyLooks.lrplugin/vendor/sony-look-bridge/LICENSE",
+    "bytes": 1086,
+    "sha256": "3442eda27f74bf99fd18f587fc3b7387c7322cdadfcab6a67950262b42d111cc"
+  },
+  {
+    "file": "assets/project/SonyLooks.lrplugin/vendor/sony-look-bridge/REVISION",
+    "bytes": 82,
+    "sha256": "52b08ca505ba6f5f2c3a4cbc8225c2ad560edd7f51c741f9b094c9dd882c0bb6"
+  },
+  {
+    "file": "assets/project/SonyLooks.lrplugin/vendor/sony-look-bridge/camera_raw/acr_encoding.json",
+    "bytes": 2268,
+    "sha256": "c56963b75da42d4455f2b5711423fcb02f5d0cea4db583684d33573bd928ba8a"
+  },
+  {
+    "file": "assets/project/SonyLooks.lrplugin/vendor/sony-look-bridge/camera_raw/acr_encoding.py",
+    "bytes": 3591,
+    "sha256": "db0b122c6e133e490e9f441be79d4ff14c67162433ac822f1e77db09eede738f"
+  },
+  {
+    "file": "assets/project/SonyLooks.lrplugin/vendor/sony-look-bridge/camera_raw/acr_look.py",
+    "bytes": 4576,
+    "sha256": "6ea784a1d23df5969710babaae55d058aa879077a53dd65271ac8b6ad2f5db2c"
+  },
+  {
+    "file": "assets/project/SonyLooks.lrplugin/vendor/sony-look-bridge/camera_raw/acr_profiles.py",
+    "bytes": 5480,
+    "sha256": "520db512772f4cd79d2b2fa28db0439b62d09f0e8488affa8a7f91f03dc141df"
+  },
+  {
+    "file": "assets/project/SonyLooks.lrplugin/vendor/sony-look-bridge/camera_raw/crs_table.py",
+    "bytes": 1381,
+    "sha256": "3ce9fa65cca46099861a921261c58a95533ddd75c4e59f8679e61851015988fb"
+  },
+  {
+    "file": "assets/project/SonyLooks.lrplugin/vendor/sony-look-bridge/camera_raw/dcp.py",
+    "bytes": 4498,
+    "sha256": "5df3eed9f9946be9c2c18adcc32f78c9f863b1b3a4bc2c367f3e9f9e7bf31db3"
+  },
+  {
+    "file": "assets/project/SonyLooks.lrplugin/vendor/sony-look-bridge/capture_one/c1_encoding_table.json",
+    "bytes": 1571,
+    "sha256": "e1dfe00211b46f4e69015e10aa3b2e3c3edbb091d5506273b0666ca31958c947"
+  },
+  {
+    "file": "assets/project/SonyLooks.lrplugin/vendor/sony-look-bridge/capture_one/c1_look_profile.py",
+    "bytes": 10976,
+    "sha256": "980c7f885ea2946fce834429885976602d0d0cd6f4514914dfcf88d3e3bdb23e"
+  },
+  {
+    "file": "assets/project/SonyLooks.lrplugin/vendor/sony-look-bridge/docs/photo.md",
+    "bytes": 12374,
+    "sha256": "4a48030ba4920bba3e86472052b351b022ae11572a7223125f408a4b083d7fc0"
+  },
+  {
+    "file": "assets/project/SonyLooks.lrplugin/vendor/sony-look-bridge/docs/pipeline.md",
+    "bytes": 46258,
+    "sha256": "fef05b7485a7a8afcfb2fa31ad24a5b9722a4d7fc419b2d2c5b6ec7c7ed55e62"
+  },
+  {
+    "file": "assets/project/SonyLooks.lrplugin/vendor/sony-look-bridge/requirements.txt",
+    "bytes": 66,
+    "sha256": "77248d10a88dd3a5767a81129459ed2b5548f3d518d5b846b5dfe585f30e8028"
+  },
+  {
+    "file": "assets/project/SonyLooks.lrplugin/vendor/sony-look-bridge/sonylook/arw_looks.py",
+    "bytes": 2728,
+    "sha256": "19bf2cdf84b642ec2f3576c65bc398535ca8913b965b643d22de38481bef347d"
+  },
+  {
+    "file": "assets/project/SonyLooks.lrplugin/vendor/sony-look-bridge/sonylook/build_color_table.py",
+    "bytes": 9801,
+    "sha256": "aa9013e07fa19812c468096f69b80680658c04abf051b3b384ecfb934b55fc01"
+  },
+  {
+    "file": "assets/project/SonyLooks.lrplugin/vendor/sony-look-bridge/sonylook/decode_780f.py",
+    "bytes": 5879,
+    "sha256": "272d8bbebecb11deb8242ab5a1536b17fafb6ac48d49ebe4e3d60dcacecbc97c"
+  },
+  {
+    "file": "assets/project/SonyLooks.lrplugin/vendor/sony-look-bridge/sonylook/decoder_params.py",
+    "bytes": 6934,
+    "sha256": "995759145ab8a32ad968fce615bbd3f082bfccb2ad96510a79c8707fd1992489"
+  },
+  {
+    "file": "assets/project/SonyLooks.lrplugin/vendor/sony-look-bridge/sonylook/develop_settings.py",
+    "bytes": 11420,
+    "sha256": "1b1c57e3c8b480b0e502673ef1a85cc9c7dbea040bb2ed275df10144ba5aa1ae"
+  },
+  {
+    "file": "assets/project/SonyLooks.lrplugin/vendor/sony-look-bridge/sonylook/edit_binary.py",
+    "bytes": 8268,
+    "sha256": "bce8bca641b86020adc4c9c3ed9c790d5d93423fe3174a3ec3a75a534353c049"
+  },
+  {
+    "file": "assets/project/SonyLooks.lrplugin/vendor/sony-look-bridge/sonylook/fluor_780f.json",
+    "bytes": 3909,
+    "sha256": "57e88c1a35e7cbe2204a30a89d83f17b3c79003dad5f454512539ffdbc074d30"
+  },
+  {
+    "file": "assets/project/SonyLooks.lrplugin/vendor/sony-look-bridge/sonylook/sony_detail.py",
+    "bytes": 15316,
+    "sha256": "e7bf1905bdd6d339d08ba44e94e8bdd87a231b38daa4fb8d630852f8b224f8d2"
+  },
+  {
+    "file": "assets/project/SonyLooks.lrplugin/vendor/sony-look-bridge/sonylook/sony_dro.py",
+    "bytes": 16283,
+    "sha256": "7b27193397c0696c46c132698578eaaab7712e486264515c32943b73afddc87b"
+  },
+  {
+    "file": "assets/project/SonyLooks.lrplugin/vendor/sony-look-bridge/sonylook/sony_effect.py",
+    "bytes": 7181,
+    "sha256": "9a8cf5928339aa653802903614174b451187d9e7e5f4a708be124cde304f6289"
+  },
+  {
+    "file": "assets/project/SonyLooks.lrplugin/vendor/sony-look-bridge/sonylook/sony_frontend.py",
+    "bytes": 15717,
+    "sha256": "584923b15f969717b3253b7a8e96a9d6eed2502d35f3839596dc4a77b7376174"
+  },
+  {
+    "file": "assets/project/SonyLooks.lrplugin/vendor/sony-look-bridge/sonylook/sony_lens.py",
+    "bytes": 11268,
+    "sha256": "eac75f7e9d5617adff506162b9541d73e7dcb71ad174d57805a2217aef0a7817"
+  },
+  {
+    "file": "assets/project/SonyLooks.lrplugin/vendor/sony-look-bridge/sonylook/sony_look.py",
+    "bytes": 12108,
+    "sha256": "5ad3d96a5613ca3aa0de424a7aec973a3fbcb01c74acb547fd3d278b7efbc0d9"
+  },
+  {
+    "file": "assets/project/SonyLooks.lrplugin/vendor/sony-look-bridge/sonylook/sony_marble.py",
+    "bytes": 24695,
+    "sha256": "53feb1c63f29cbfe109db92865278c151fb1deaaa404dfb5f8a848ecb9dca0f5"
+  },
+  {
+    "file": "assets/project/SonyLooks.lrplugin/vendor/sony-look-bridge/sonylook/sony_render.py",
+    "bytes": 33846,
+    "sha256": "8dd92e402a0f6b57cb91e95e9bc50c36f746bbdac1297e9216ff4ed287cc442e"
+  },
+  {
+    "file": "assets/project/SonyLooks.lrplugin/vendor/sony-look-bridge/sonylook/sony_shade.py",
+    "bytes": 6651,
+    "sha256": "7517041ed7ae5a12b3145e41e07a7b48fac286b1a16f08bbd76bd278976e850b"
+  },
+  {
+    "file": "assets/project/SonyLooks.lrplugin/vendor/sony-look-bridge/sonylook/sony_sscs.py",
+    "bytes": 4820,
+    "sha256": "bd2e289bda9c906b753daa32d7d37715952fab4ce7f27e9b214b5447c8c605d4"
+  },
+  {
+    "file": "assets/project/SonyLooks.lrplugin/vendor/sony-look-bridge/sonylook/sony_tonecurve.py",
+    "bytes": 7290,
+    "sha256": "daa7a1cadb810a7cde7c039ee4e48670bee78b05e8a235fe7acff163d6fb67ca"
+  },
+  {
+    "file": "assets/project/SonyLooks.lrplugin/vendor/sony-look-bridge/sonylook/sony_ycc.py",
+    "bytes": 5018,
+    "sha256": "6c7bc93423f1ae6338262a140a7f24e904f4599d18dad5e411b2bac3e874da1b"
+  },
+  {
+    "file": "assets/project/SonyLooks.lrplugin/vendor/sony-look-bridge/sonylook/sony_ycc_stages.py",
+    "bytes": 26982,
+    "sha256": "bba2df4fcf85e276852c35c276fbadffba80140a140694c8b8aaf45c67ed70b1"
+  },
+  {
+    "file": "assets/project/SonyLooks.lrplugin/vendor/sony-look-bridge/sonylook/sr2.py",
+    "bytes": 3786,
+    "sha256": "e6114d62e278b763ebc17cfbf11f523fac1e788bb559c9657221093ee1217bc0"
+  },
+  {
+    "file": "assets/project/SonyLooks.lrplugin/vendor/sony-look-bridge/sonylook/table_cache.py",
+    "bytes": 2530,
+    "sha256": "4f9ffc4e17362448eb0f564becd705fd8e4fe7c1bc62bbb90717e36f25943ea6"
+  },
+  {
+    "file": "assets/project/SonyLooks.lrplugin/vendor/sony-look-bridge/sonylook/warm_780f.json",
+    "bytes": 3909,
+    "sha256": "ff8042f058f5f43af2bb85f9a01e2030dc7c641ec77d75ae7a670e05906cdf38"
+  },
+  {
+    "file": "assets/project/install-windows.cmd",
+    "bytes": 124,
+    "sha256": "d703f436ebcf83156a36ee66e90d3fdba0de10ce4895903b46891c6008f6fef0"
+  },
+  {
+    "file": "assets/project/install.py",
+    "bytes": 6576,
+    "sha256": "7f48f53b4ea94d36c1bd94fdf97844666afa5514354816042deea91ed76383e1"
+  },
+  {
+    "file": "assets/project/安装或修复.command",
+    "bytes": 425,
+    "sha256": "dd548de046415aeb539f861b7bf960d14a91c0296ab72e3ff95576cbbc0529db"
+  },
+  {
+    "file": "references/adaptation.en.md",
+    "bytes": 6137,
+    "sha256": "0ec494d5d31acf37bbdca37be04a981039fd6203d0b567f5115ee4a934ca92fd"
+  },
+  {
+    "file": "references/adaptation.md",
+    "bytes": 4763,
+    "sha256": "c23faa18f9dc3b8bca3dc716e9348d498d0b725f3d24f29187d0fda511ec7fc5"
+  },
+  {
+    "file": "references/formats.en.md",
+    "bytes": 3605,
+    "sha256": "34849130542aadfc787ee34f8702a2052a72c1a2578c9aa12628a5d3d2a90866"
+  },
+  {
+    "file": "references/formats.md",
+    "bytes": 3412,
+    "sha256": "89598bbf92c44483c7ab2a25eac95faa3b69c918978217a7ab6dc63b28cb25c5"
+  },
+  {
+    "file": "references/validation.json",
+    "bytes": 966,
+    "sha256": "2a0468db2da8c170930ce5f68b298ec3e6d3701f3fc1350ce3ea6be2a717bb65"
+  },
+  {
+    "file": "references/verification.en.md",
+    "bytes": 2894,
+    "sha256": "32455a4e34af8a55de3d6fe07b04f65359e8f737b6b45311675c81e7c8e5672f"
+  },
+  {
+    "file": "references/verification.md",
+    "bytes": 2644,
+    "sha256": "ffcfb9253a157fa0225c3e4a1f7f9bc0fd4d12631f722d23dded94a211f593c4"
+  },
+  {
+    "file": "scripts/assemble.py",
+    "bytes": 3873,
+    "sha256": "1da1c5844efead0000a22800c2836c4ed08235a30f787b91953743673159645d"
+  },
+  {
+    "file": "scripts/common.py",
+    "bytes": 5372,
+    "sha256": "5b66f8163fe82ab98d6bcdc82e0baca1ce1d5c0ff330a0198d5fcda6488c2d0b"
+  },
+  {
+    "file": "scripts/new_adapter.py",
+    "bytes": 1389,
+    "sha256": "ccdfc5725870d351cfc6e6abaa0fafa11a71c3db09294a5c4aa8a82badb28c33"
+  },
+  {
+    "file": "scripts/probe.py",
+    "bytes": 1886,
+    "sha256": "3055b5559c75ff03d910adaa47dff2a1332793bef711769f552bae85b302bcb8"
+  },
+  {
+    "file": "scripts/register_profiles.py",
+    "bytes": 2182,
+    "sha256": "97afbb997330f1582f1e84a6f8e9d79462a3ebed904bde2c9ecc64282625bb24"
+  },
+  {
+    "file": "scripts/validate_samples.py",
+    "bytes": 509,
+    "sha256": "69809fbb2eb879494b95483e4656053fd1d96851331719ec31fe94401e83fb8e"
+  },
+  {
+    "file": "tests/test_kit.py",
+    "bytes": 8363,
+    "sha256": "99c40845ce691fb6abad7a30b537748d01cf6336536f177de67ee65f69b8e997"
+  },
+  {
+    "file": "开始使用.md",
+    "bytes": 1767,
+    "sha256": "65f66fed22a38cab704a77dceac30e945f6fdca33c483648d8f19839ed1876d6"
+  }
+]

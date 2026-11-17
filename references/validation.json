@@ -1,0 +1,35 @@
+{
+  "version": "0.4.0",
+  "date": "2026-11-17",
+  "automated_tests": {
+    "passed": 7,
+    "real_sample_pairs": 4,
+    "arbitrary_model_routing": "synthetic fixtures passed"
+  },
+  "workflow": {
+    "probe": "passed with 10 original sample copies",
+    "sample_validation": "4 pairs passed",
+    "native_generation": "4 profiles at grid64",
+    "color_tables": "identical to existing A9III reference",
+    "registration": "passed",
+    "assembly": "passed",
+    "installer_dry_run": "passed",
+    "installer_isolated_reinstallation": "passed"
+  },
+  "actual_camera_baseline": {
+    "model": "ILCE-9M3",
+    "firmware": "4.00",
+    "prior_runtime": "0.3.0",
+    "lrc": "16.0",
+    "macOS": "15.8.3",
+    "looks": [
+      "电影人生",
+      "追光者",
+      "澄青",
+      "都市漫游"
+    ]
+  },
+  "new_runtime_lrc_gui": "pending_per_generated_project",
+  "other_camera_hardware": "由用户原片建立适配后验证",
+  "windows_lrc": "待实机验证"
+}

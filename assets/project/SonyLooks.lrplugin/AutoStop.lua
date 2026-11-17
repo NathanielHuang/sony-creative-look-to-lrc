@@ -1,0 +1,2 @@
+_G.SonyLooksAutoGeneration=nil
+_G.SonyLooksAutoRunning=false
