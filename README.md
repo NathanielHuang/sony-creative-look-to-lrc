@@ -2,20 +2,10 @@
 
 [简体中文](README.zh-CN.md)
 
-Use the Creative Looks you downloaded from Sony Creators’ App when editing RAW photos in Lightroom Classic (LRC). Give a local AI agent your camera details, recipe screenshots, and sample photos. The agent builds the profiles, installs the plugin, and checks the results.
+Use the Creative Looks you downloaded in Sony Creators’ App on your RAW photos in Lightroom Classic. Give a local AI assistant your recipe screenshots and sample photos so it can build profiles for your camera. If the camera records enough information to identify the look, the plug-in applies it after import.
 
-Start with the [Getting Started guide](GETTING_STARTED.md). The agent follows [SKILL.md](SKILL.md).
+For your first setup, follow the [setup guide](GETTING_STARTED.md) and open the whole folder in an AI agent that can read local files and run commands. If the agent supports skills, you can install the folder as `sony-creative-look-to-lrc`. [Agent instructions](SKILL.md)
 
-| Directory | Contents |
-| --- | --- |
-| `scripts/` | Check your setup and samples, create a camera adapter, and build an installer |
-| `assets/project/` | Plugin, installer, and color processing templates |
-| `adapters/` | Camera adapters, including a tested Sony α9 III example |
-| `references/` | Technical notes and test procedures |
-| `tests/` | Automated tests |
+The toolkit includes four profiles made from Sony α9 III samples. Two of them, Lucid Cyan and Urban Stroll, use FL3 as their base look. The plug-in tells them apart by the recipe settings recorded in each photo. For another Sony model, start with files from your own camera. [Test record](references/validation.json)
 
-Open this folder with an agent that can run commands on your computer. If your agent supports skills, you can also install the folder as `sony-creative-look-to-lrc`.
-
-The included α9 III profiles were checked with four recipes under indoor light. Other cameras and lighting need their own samples. The package includes a Windows installer. Windows Lightroom Classic testing is pending.
-
-Version 0.4.0. See the [test record](references/validation.json) and [third-party credits](THIRD_PARTY.en.md).
+Version 0.4.0. [Third-party credits](THIRD_PARTY.en.md)

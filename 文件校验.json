@@ -6,8 +6,8 @@
   },
   {
     "file": "GETTING_STARTED.md",
-    "bytes": 2292,
-    "sha256": "f4502291e788ca7a76ae27abe03abe89474f7cc550463ee407b4a50e4695ccde"
+    "bytes": 1385,
+    "sha256": "0a4cbb2a97135de88f2e842932556dc257ac4dd3d4b7c177fd364c18a3f9783e"
   },
   {
     "file": "LICENSE",
@@ -16,33 +16,33 @@
   },
   {
     "file": "README.md",
-    "bytes": 1308,
-    "sha256": "98859734e9ba4ed8ae48da8408e1f26ef1af946e09e7721e677c07c0a913e9b7"
+    "bytes": 1024,
+    "sha256": "ffc5a92c8821a59f6178d02a9f7cf4576806364b2b78afbd86c19b29f909b1a9"
   },
   {
     "file": "README.zh-CN.md",
-    "bytes": 812,
-    "sha256": "f18e15fca6e53e6639dd608c2861e24a3aadebb40fa477dbb5bd6b491a378e42"
+    "bytes": 965,
+    "sha256": "daa43c3edcc16ebaf2af0438a19378597dc9fbe033292e297dd6f8022bfd2428"
   },
   {
     "file": "SKILL.md",
-    "bytes": 4115,
-    "sha256": "062284bfad9a2899e01e3e99460b4caae979c312e1ed9782c7fc92a575b3e177"
+    "bytes": 3831,
+    "sha256": "59902367b31705ba052ed1dee0e5db376b2fad876ff7ca468258f65b8a36e310"
   },
   {
     "file": "SKILL.zh-CN.md",
-    "bytes": 3618,
-    "sha256": "8469088825cfa7937dbe94b950198404371d92ad9e7ee243c1c83cc0d3fd26e2"
+    "bytes": 3393,
+    "sha256": "8ec3a34348304bd47cf4acb46d660fca4bc5ac14193e1809084e24ec25056536"
   },
   {
     "file": "THIRD_PARTY.en.md",
-    "bytes": 874,
-    "sha256": "82da33c41645a1ee54a943ac4905f5d55d087c9466d6ef43056c229e09346102"
+    "bytes": 682,
+    "sha256": "0080586deb035b4e06ed2bb7e3e790ee95135eab33940634d0b866dccd2959e5"
   },
   {
     "file": "THIRD_PARTY.md",
-    "bytes": 718,
-    "sha256": "d939db2d9be9a9e84263ee3f709ea12202c16df6881f6d1eb484e32526e2ddef"
+    "bytes": 593,
+    "sha256": "1faeeab6b75a870e520d3977044863d091dd947b059f500d988a21bc94f7408e"
   },
   {
     "file": "adapters/sony-ilce-9m3/adapter.json",
@@ -376,23 +376,23 @@
   },
   {
     "file": "references/adaptation.en.md",
-    "bytes": 6137,
-    "sha256": "0ec494d5d31acf37bbdca37be04a981039fd6203d0b567f5115ee4a934ca92fd"
+    "bytes": 4170,
+    "sha256": "b6c3d8e25872edbef02ca5922568355838ae9b5ae5ac4110566113e0dcc9544a"
   },
   {
     "file": "references/adaptation.md",
-    "bytes": 4763,
-    "sha256": "c23faa18f9dc3b8bca3dc716e9348d498d0b725f3d24f29187d0fda511ec7fc5"
+    "bytes": 3622,
+    "sha256": "934b233ebf1ffaac596122a82cd23f59cf8ed072854c91410a4228eff71cce05"
   },
   {
     "file": "references/formats.en.md",
-    "bytes": 3605,
-    "sha256": "34849130542aadfc787ee34f8702a2052a72c1a2578c9aa12628a5d3d2a90866"
+    "bytes": 3086,
+    "sha256": "f9a8467f5b1172f909089e3a370cea37fde25c324f74c2ebe819971a334db617"
   },
   {
     "file": "references/formats.md",
-    "bytes": 3412,
-    "sha256": "89598bbf92c44483c7ab2a25eac95faa3b69c918978217a7ab6dc63b28cb25c5"
+    "bytes": 2788,
+    "sha256": "59d2935f811f24543bbc7de3f55409ec6320c63f7e746eb3aa8457fb56690b17"
   },
   {
     "file": "references/validation.json",
@@ -401,18 +401,18 @@
   },
   {
     "file": "references/verification.en.md",
-    "bytes": 2894,
-    "sha256": "32455a4e34af8a55de3d6fe07b04f65359e8f737b6b45311675c81e7c8e5672f"
+    "bytes": 1259,
+    "sha256": "a8e43ad926f15b82fe7913629e231e26383180c2a48bf0ba5d516d1e399a2ddb"
   },
   {
     "file": "references/verification.md",
-    "bytes": 2644,
-    "sha256": "ffcfb9253a157fa0225c3e4a1f7f9bc0fd4d12631f722d23dded94a211f593c4"
+    "bytes": 1208,
+    "sha256": "08b0735bd5c174c936b32d46ef0cefb5c3d68720ca94a1e814cbdc00872d82b6"
   },
   {
     "file": "scripts/assemble.py",
-    "bytes": 3873,
-    "sha256": "1da1c5844efead0000a22800c2836c4ed08235a30f787b91953743673159645d"
+    "bytes": 4105,
+    "sha256": "e0238f22ba5719e5b45764e691aa8d60d9949272729be8d5cd2274b7dee7d5ba"
   },
   {
     "file": "scripts/common.py",
@@ -446,7 +446,7 @@
   },
   {
     "file": "开始使用.md",
-    "bytes": 1767,
-    "sha256": "65f66fed22a38cab704a77dceac30e945f6fdca33c483648d8f19839ed1876d6"
+    "bytes": 1146,
+    "sha256": "28f2ec828937ae32182a33aa3ac08c9c297de2e11f0cf776ce87ad27e81c520c"
   }
 ]

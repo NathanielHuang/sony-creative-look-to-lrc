@@ -29,17 +29,23 @@ def assemble(adapter,out,samples=None,draft=False):
   # Names are JSON-quoted strings, also valid Lua string literals for camera labels.
   s=s.replace("LrPluginName='SonyLooks创作者外观'","LrPluginName="+lua('索尼创作者外观 '+a['model']))
   s=s.replace('minor=3','minor=4');info.write_text(s,encoding='utf-8')
-  readme='''# 索尼创作者外观
+  readme='''# 在Lightroom Classic里用索尼创意外观
 
-退出LRC，运行“安装或修复.command”（macOS）或“install-windows.cmd”（Windows），完成后重新打开LRC。在“文件→增效工具管理器”中确认插件已启用。
+## 安装
 
-导入照片时，“修改照片设置”选择“无”。新照片仍使用Adobe默认配置时，插件会识别配方并应用外观。
+退出Lightroom Classic（LRC）。macOS运行“安装或修复.command”，Windows运行“install-windows.cmd”。装好后重新打开LRC，在“文件 → 增效工具管理器”里确认插件已启用。
 
-已有照片先选中，再使用“图库→增效工具额外信息→应用到选中照片”。想保留原编辑版本，选择“创建外观虚拟副本”。应用外观只替换外观和基础配置。
+## 导入和修图
 
-重装或更新后，再运行一次安装程序。旧安装保存在运行数据目录的“安装备份”中，路径可在插件的“查看运行状态”中找到。
+平时照常导入ARW，“修改照片设置”选“无”。新照片还在用Adobe默认配置时，插件会按拍摄设置匹配外观。第一次用时，打开“修改照片”看一下外观名，再导出一张和机内JPEG比较。已装好的外观也可以在配置文件浏览器里按名称选。
 
-新增外观或升级固件后，把新样本交给Agent检查。需要调整其他光照下的效果时，也提供对应照片。Agent在LRC中完成测试后，会填写安装包内的验收记录。
+给旧照片匹配外观时，先选中照片，再点“图库 → 增效工具额外信息 → 应用到选中照片”。想保留当前版本，就用同一菜单里的“创建外观虚拟副本”。
+
+## 更新和恢复
+
+重装LRC后再运行一次安装器。添加外观、更换相机或升级固件时，把新样片交给助手检查。
+
+要恢复旧安装，先退出LRC。插件菜单里的“查看运行状态”会显示运行记录路径。上一级目录里有“安装备份”和安装记录。按记录把旧插件和配置放回原处，再打开LRC。
 '''
   (stage/'使用说明.md').write_text(readme,encoding='utf-8')
   if draft:(stage/'DRAFT.json').write_text('{"purpose":"profile construction only"}\n')

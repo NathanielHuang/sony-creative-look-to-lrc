@@ -1,9 +1,7 @@
-# 来源
+# 第三方代码和色彩资产
 
-Sony Look Bridge：<https://github.com/751K/sony-look-bridge>
+原生色彩表的读取和生成使用[Sony Look Bridge](https://github.com/751K/sony-look-bridge)，版本为`71a7422bff2a9ce921b747ea126d58445af8b242`。基础DCP生成器参考了其中的`acr_profiles.py`和`dcp.py`。上游MIT许可证随代码保存在`vendor/sony-look-bridge/LICENSE`。
 
-固定提交：`71a7422bff2a9ce921b747ea126d58445af8b242`。使用其中的原生表解析及生成代码，保留MIT许可证，见`assets/project/SonyLooks.lrplugin/vendor/sony-look-bridge/LICENSE`。基础DCP生成器参考其acr_profiles.py和dcp.py。
+本项目原创代码采用[MIT许可证](LICENSE)。α9 III示例中的外观名称和配方来自Sony Creators’ App，XMP中的色彩表由实拍样本生成。
 
-本项目原创代码采用MIT许可证。A9III实例中的配方名称及参数来源于Sony Creators’App，XMP色彩表由用户提供的实拍样本生成。配套色彩资产单独列示，代码MIT授权适用于代码部分。
-
-工具包未包含Adobe原始DCP、Sony应用程序或个人照片。个人项目从本机配置生成基础DCP，或使用用户提供的配套DCP。
+安装时，基础DCP由本机的Adobe配置生成，也可以使用用户提供的配套DCP。

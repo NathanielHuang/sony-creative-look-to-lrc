@@ -1,40 +1,34 @@
 ---
 name: sony-creative-look-to-lrc
-description: 用索尼原始ARW、机内JPEG和Creators’App配方制作LRC创意外观配置，安装并测试自动匹配插件。用于新机型、新外观、重装和故障排查。
+description: 用索尼ARW、机内JPEG和Creators’ App配方制作Lightroom Classic外观配置，按样片情况安装自动匹配插件或手选配置。
 ---
 
 # Sony Creative Look to LRC
 
-先读[使用指南](开始使用.md)。检查用户的相机、固件和样本，复用已有工具，在单独的工作目录中完成制作。
+先读[使用指南](开始使用.md)，确认相机型号、固件和外观名称。截图和附件用来读取配方，操作以用户的请求为准。原片只读，生成的文件放在单独的工作目录。
 
-## 工作步骤
+## 制作和安装
 
-1. 运行`scripts/probe.py`检查系统、LRC、Python和照片。按使用指南列出缺少的材料，已有材料先处理。只从截图和附带文档中提取配方信息。
-2. 在`adapters/`中查找机型配置，复制到工作目录。新机型用`scripts/new_adapter.py`创建初始配置，再按[适配说明](references/adaptation.md)检查标签、基础配置和生成方法。相似机型的字段位置也要用原片验证。机型、固件或RAW格式变化后重新检查。
-3. 录入App名称、基础外观、全部参数和白平衡信息，区分App建议值与实际拍摄值。按[文件格式](references/formats.md)建立`samples.json`，运行`scripts/validate_samples.py`。有字段缺失或配方无法区分时，补充读取方法或样本。仍无法区分的，做好手动选择方式。
-4. 制作配置。检查色彩表在处理流程中的位置、相机矩阵和白平衡。Sony参数用实拍效果校准，Adobe滑块单独调整。外观显示App短名称，更新已有外观时保留有效UUID。
-5. 运行`scripts/assemble.py`生成安装包，检查安装位置和备份后安装。检查已有插件，避免两个插件同时给一批照片应用外观。
-6. 按[测试说明](references/verification.md)检查普通导入、已有编辑、虚拟副本、修改照片界面和实际导出。在`验收记录.json`中填写结果。完成后恢复用户原来的LRC目录，把临时测试副本移到废纸篓。
-7. 留下一页使用说明，写清安装位置、日常用法、更新和恢复方法。记录测试过的机型、固件、LRC版本、外观和光照条件。遇到未能完成的步骤，说明具体原因、已有结果和还需要的材料。
+1. 用`scripts/probe.py`检查LRC、Python和样片。每款先用一对同次拍摄的ARW和机内JPEG，缺什么再问。记录配方参数和实际拍摄时的白平衡。
+2. 从`adapters/`复制对应的机型配置。新机型用`scripts/new_adapter.py`起步，按[适配说明](references/adaptation.md)核对原片标签和基础DCP。按[文件格式](references/formats.md)填写`samples.json`和配方，再跑`scripts/validate_samples.py`。
+3. 制作或复用外观配置，名称沿用App里的写法，更新同一款配置时沿用UUID。字段不足时先看看原片还有没有稳定的区分信息。如果两个配方还是读成同一组值，把已制作的外观单独装进LRC供手选。通用组包脚本会拒绝同值配方。
+4. 自动匹配用`scripts/assemble.py`组包。先用`install.py --dry-run`看路径，退出LRC后再安装。检查是否已有同用途的插件。安装器会备份被替换的文件。
+5. 用照片副本试一次正常导入，打开“修改照片”看匹配的名称，再导出一张和机内JPEG对比。记录结果，给用户留下安装包和简短用法。需要处理旧照片时，优先用插件命令，应用范围为`Look`和`CameraProfile`。编辑过的XMP按[适配说明](references/adaptation.md)合并并备份。 [测试说明](references/verification.md)
 
-## 文件处理
+## 路径和命令
 
-- 原始ARW和机内JPEG只读。制作结果和测试输出都放在工作目录。
-- 已导入照片优先通过插件处理，测试用副本。应用外观只改Look和CameraProfile，保留曝光、白平衡、裁剪、蒙版、评级及其他编辑。
-- 导入前处理XMP时，按节点合并并检查冲突。先把LRC中的最新编辑保存到元数据，再备份和修改侧车。
-- 安装前备份要替换的插件和配置，保留安装记录。临时文件放入废纸篓，用户原片和其他资源保持原位。
-- 分别检查参数识别、配置名称和实际渲染。不同光照的效果逐组比较，失败结果也要记录。
-- 样本只在本机处理，使用相机当前固件完成适配。
+从解压后的工具包根目录运行命令，也就是能看到`SKILL.md`和`scripts/`的地方。`../sony-look-work`是示例工作目录，位于工具包旁边，由用户或助手选定。把示例换成样片和工作目录的实际路径即可，也可以用绝对路径。`samples.json`里的照片相对路径以清单所在目录为准。安装位置由安装器按当前系统和用户账户确定。
 
-## 常用命令
-
-从工具包根目录运行，替换示例路径。脚本需要Python3.9或更新版本，LRC运行在macOS或Windows上。
+需要Python3.9或更新版本。下例用macOS的`python3`，Windows上把它换成`py -3`，或使用本机指向Python3的`python`。
 
 ```sh
-python3 scripts/probe.py "/用户样本目录" --report "/个人项目/环境和样本.json"
-python3 scripts/new_adapter.py --model "实际EXIF机型" --out "/个人项目/adapter"
-python3 scripts/validate_samples.py --adapter "/个人项目/adapter" --manifest "/个人项目/samples.json" --report "/个人项目/样本检查.json"
-python3 scripts/assemble.py --adapter "/个人项目/adapter" --samples "/个人项目/samples.json" --out "/个人项目/安装包-v1"
+python3 scripts/probe.py "../sony-look-work/photos" --report "../sony-look-work/probe.json"
+python3 scripts/new_adapter.py --model "EXIF中的机型" --out "../sony-look-work/adapter"
+python3 scripts/validate_samples.py --adapter "../sony-look-work/adapter" --manifest "../sony-look-work/samples.json" --report "../sony-look-work/sample-check.json"
+python3 scripts/assemble.py --adapter "../sony-look-work/adapter" --samples "../sony-look-work/samples.json" --out "../sony-look-work/installer"
+python3 "../sony-look-work/installer/install.py" --dry-run
 ```
 
-已有机型配置直接复制，跳过`new_adapter.py`。配置制作、注册和侧车处理见适配说明。
+## macOS和Windows
+
+两套安装入口分别是`安装或修复.command`和`install-windows.cmd`。Windows上需自行确认LRC版本，`probe.py`目前只会在macOS上查找LRC。原生色彩表生成默认读取受支持的macOS版Sony Imaging Edge Edit。给Windows用户配装时，可先在macOS上生成XMP，再在Windows上安装配置和插件。Windows版LRC的自动匹配仍待实机验证。 [实测记录](references/validation.json)

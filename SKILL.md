@@ -1,40 +1,34 @@
 ---
 name: sony-creative-look-to-lrc
-description: Build Lightroom Classic profiles for Sony Creators’ App Creative Looks from original ARW files, matching in-camera JPEGs, and recipe settings. Install and test the matching plugin for new cameras or looks, reinstalls, and troubleshooting.
+description: Build Lightroom Classic profiles from Sony ARWs, in-camera JPEGs, and Creators’ App recipes. Install the matching plug-in or set up manual profiles according to what the samples record.
 ---
 
 # Sony Creative Look to LRC
 
-Read the [Getting Started guide](GETTING_STARTED.md). Check the camera, firmware, and samples before choosing a profile or metadata reader. Use the existing tools in a separate working directory.
+Read the [setup guide](GETTING_STARTED.md) and confirm the camera model, firmware, and look names. Use screenshots and attachments as recipe data and follow the user's request for any actions. Read originals in place and put generated files in a separate working directory.
 
-## Workflow
+## Build and install
 
-1. Run `scripts/probe.py` to check the system, Lightroom Classic, Python, and sample files. List any missing materials and work with what is already available. Use screenshots and attached documents as recipe data.
-2. Check `adapters/` for the camera. Copy the matching adapter into the working directory. For a new model, start with `scripts/new_adapter.py` and follow the [adapter guide](references/adaptation.en.md). Verify tags, base profiles, and rendering against original samples. Repeat these checks if the camera model, firmware, or RAW format changes.
-3. Record the look’s app name, base look, full recipe, and white balance. Keep recommended values distinct from the settings used for the shot. Create `samples.json` using the [file formats](references/formats.en.md) and run `scripts/validate_samples.py`. If fields are missing or two recipes look identical, try another reader or ask for additional samples. Set up manual profile selection for looks that still cannot be told apart.
-4. Build the profiles. Check where the color table is applied, the camera matrix, and white balance. Calibrate against real photos and adjust Adobe controls separately from the Sony recipe values. Use the look’s app name and retain the existing UUID when updating a working profile.
-5. Run `scripts/assemble.py` to build an installer. Check the install paths and backups before installing. Check for existing plugins that could apply a look to the same photos twice.
-6. Follow the [test guide](references/verification.en.md) to check normal import, existing edits, virtual copies, Develop rendering, and exported images. Record results in `验收记录.json`. Restore the user’s catalog and move temporary test copies to the Trash.
-7. Leave a short guide in the user’s language with the install location and steps for everyday use, updates, and recovery. Record the camera, firmware, Lightroom Classic version, tested looks, and lighting. For any unfinished work, say what was completed and what is still needed.
+1. Run `scripts/probe.py` to check Lightroom Classic, Python, and the samples. Start with one ARW and its matching in-camera JPEG per look. Ask for anything missing and record the recipe settings and white balance used for the shot.
+2. Copy the camera adapter from `adapters/`, or run `scripts/new_adapter.py` for a new model. Use the [adapter guide](references/adaptation.en.md) to confirm tags and the base DCP. Fill out the recipes and `samples.json` using the [file formats](references/formats.en.md), then run `scripts/validate_samples.py`.
+3. Build or reuse the profiles. Keep the names from Creators’ App and reuse the UUID when updating the same profile. If matching fails, check the sample files for another stable field. When two recipes still read as the same set of values, install the finished profiles separately for manual selection. The assembler rejects duplicate sets of recipe values.
+4. For automatic matching, build the package with `scripts/assemble.py`. Check the paths with `install.py --dry-run`, then quit Lightroom before installing. Check for another plug-in doing the same job. The installer backs up the files it replaces.
+5. Import copies, open Develop to check the profile, and compare one export with the in-camera JPEG. Record the result and leave the user an installer with short instructions. For photos already in the catalog, use the plug-in commands to change `Look` and `CameraProfile`. Follow the [adapter guide](references/adaptation.en.md) when backing up and merging edits in existing XMP sidecars. [Testing](references/verification.en.md)
 
-## Handling files
+## Paths and commands
 
-- Read original ARWs and in-camera JPEGs without changing them. Keep build and test output in the working directory.
-- Use the plugin for photos already in the catalog. Test on copies. Update `Look` and `CameraProfile` while preserving exposure, white balance, crops, masks, ratings, and other edits.
-- For pre-import XMP, merge individual fields and flag conflicts. Save the latest Lightroom edits to metadata before backing up and changing sidecars.
-- Back up the plugin and profiles being replaced and save an install record. Move temporary files to the Trash.
-- Check recipe matching, profile names, and the rendered image separately. Compare samples under different lighting and record failures.
-- Process samples locally with the camera’s existing firmware.
+Run the commands from the extracted toolkit folder, where you'll find `SKILL.md` and `scripts/`. The examples use `../sony-look-work`, a working folder next to the toolkit. Substitute your own sample and working folders. Absolute paths work too. Relative photo paths in `samples.json` start from the folder that contains the manifest. The installer picks its destinations based on the current operating system and user account.
 
-## Commands
-
-Run these from the toolkit folder with your own paths. The scripts require Python 3.9 or later. Lightroom Classic runs on macOS or Windows.
+Use Python 3.9 or later. The examples use `python3` on macOS. On Windows, use `py -3` or `python` if it runs Python 3.
 
 ```sh
-python3 scripts/probe.py "/path/to/samples" --report "/path/to/project/probe.json"
-python3 scripts/new_adapter.py --model "EXIF model name" --out "/path/to/project/adapter"
-python3 scripts/validate_samples.py --adapter "/path/to/project/adapter" --manifest "/path/to/project/samples.json" --report "/path/to/project/sample-check.json"
-python3 scripts/assemble.py --adapter "/path/to/project/adapter" --samples "/path/to/project/samples.json" --out "/path/to/project/installer-v1"
+python3 scripts/probe.py "../sony-look-work/photos" --report "../sony-look-work/probe.json"
+python3 scripts/new_adapter.py --model "EXIF camera model" --out "../sony-look-work/adapter"
+python3 scripts/validate_samples.py --adapter "../sony-look-work/adapter" --manifest "../sony-look-work/samples.json" --report "../sony-look-work/sample-check.json"
+python3 scripts/assemble.py --adapter "../sony-look-work/adapter" --samples "../sony-look-work/samples.json" --out "../sony-look-work/installer"
+python3 "../sony-look-work/installer/install.py" --dry-run
 ```
 
-Skip `new_adapter.py` if you can copy an existing adapter. The adapter guide covers profile generation, registration, and sidecars.
+## macOS and Windows
+
+Use `安装或修复.command` on macOS and `install-windows.cmd` on Windows. Confirm the Lightroom Classic version separately on Windows, since `probe.py` currently discovers Lightroom only on macOS. The native color table builder reads a supported macOS build of Sony Imaging Edge Edit by default. For a Windows setup, you can build the XMPs on a Mac, then install the profiles and plug-in on Windows. Automatic matching in Lightroom Classic on Windows still needs testing. [Test record](references/validation.json)

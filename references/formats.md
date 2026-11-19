@@ -1,48 +1,43 @@
-# 文件格式
+# 适配文件格式
 
-每个机型目录有三个配置文件：`adapter.json`、`recipes.json`和`profiles.json`。XMP外观放在`profiles/`中。需要自定义读取方法时添加`reader.py`，使用现成基础配置时添加`base.dcp`。
+每个机型目录有`adapter.json`、`recipes.json`和`profiles.json`。XMP放进`profiles/`。自定义读取器用`reader.py`，自带的基础DCP用`base.dcp`。
 
 ## adapter.json
 
-运行`scripts/new_adapter.py`创建初始配置，再根据原片和本机资源填写。
+`scripts/new_adapter.py`会生成一份初始配置。以相机原片和本机DCP为准核对字段。
 
-|字段|用途|
-|---|---|
-|id|由小写字母、数字和短横线组成，用于插件安装目录，更新时保持不变|
-|model|原片EXIF中的准确型号|
-|dcp_model|DCP的UniqueCameraModel和XMP的机型限制值|
-|adobe_profile_filename|本机Adobe基础配置的文件名|
-|base_name|XMP引用的基础DCP名称|
-|base_mode|`linear_from_adobe`或`provided`|
-|reader|`sony_makernote`或`custom`|
-|maker_note_prefix、maker_note_skip|MakerNote头和偏移|
-|style_tag|基础外观字段的标签地址，填JSON整数|
-|fields|参与匹配的参数名及标签地址，顺序与配方values一致|
-|signature_engine|验证后可填`sony_sr2_v1`，未使用时填null|
-|renderer|验证后可填`sony_sr2`，其他方法填null并另行实现|
-|validation|样本来源、固件、测试环境、结果和光照条件|
+| 字段 | 填什么 |
+| --- | --- |
+| `id` | 安装用的固定ID，由小写字母、数字和短横线组成 |
+| `model` | 原片EXIF中的机型 |
+| `dcp_model` | DCP的`UniqueCameraModel`，也用作XMP的机型限制 |
+| `adobe_profile_filename` | 本机Adobe Standard DCP的文件名 |
+| `base_name` | XMP引用的基础DCP名称 |
+| `base_mode` | `linear_from_adobe`从本机Adobe配置生成线性DCP，`provided`使用附带的`base.dcp` |
+| `reader` | `sony_makernote`用内置读取器，`custom`用`reader.py` |
+| `maker_note_prefix`、`maker_note_skip` | MakerNote前缀及跳过的字节数 |
+| `style_tag` | 基础外观的标签编号，填整数 |
+| `fields` | 用于识别配方的参数名和标签编号，顺序要与`values`一致 |
+| `signature_engine`、`renderer` | 原生表流程分别用`sony_sr2_v1`和`sony_sr2`，其他方案可填`null` |
+| `validation` | 记录样片、固件、LRC版本和测试结果 |
 
-`linear_from_adobe`生成与本工具原生表流程配套的线性基础配置。`provided`使用机型目录中的`base.dcp`，安装时检查机型和名称。基础DCP要与色彩生成方法配套。
-
-选择`custom`时，`reader.py`需实现`read_metadata(path, adapter)`，返回`model`、`style`、`date`和fields中的各项参数。函数只读文件，缺少的字段填null。作者标识、白平衡微调等字段经过ARW/JPEG验证后，也可加入匹配条件。
+自定义`reader.py`实现`read_metadata(path, adapter)`，返回`model`、`style`、`date`及`fields`列出的参数。缺失字段返回`None`。
 
 ## recipes.json
 
-每款外观使用一个固定ID，填写名称、基础外观和参数。`english`为可选字段。
+为每款外观取一个固定ID。`name`用App里的名称。`english`可选。
 
 ```json
 {
   "my_look": {
-    "name": "App中的外观名称",
-    "style": "实际基础外观",
+    "name": "App里的外观名",
+    "style": "相机记录的基础外观",
     "values": [0, 0, 0, 0, 0, 4, 3, 0]
   }
 }
 ```
 
-默认8项参数依次为对比度、高光、阴影、褪色、饱和度、锐度、锐度范围、清晰度。修改fields后，values也要按相同顺序调整。
-
-名称用于显示，自动匹配使用原片中读到的字段。如果两款配方的这些值完全相同，需要补充区分条件。
+默认8项依次是对比度、高光、阴影、褪色、饱和度、锐度、锐度范围、清晰度。调整`fields`时，对应调整`values`。自动匹配用`style`和`values`，显示名称可以单独改。
 
 ## samples.json
 
@@ -59,14 +54,10 @@
 }
 ```
 
-照片路径相对于samples.json，也可以填写绝对路径。每款至少一对同次拍摄的ARW/JPEG。
-
-验证脚本检查机型、配方参数、可读取的拍摄时间和文件SHA-256，并确认每款都有样本。两张照片是否来自同一次拍摄，由用户确认。结果保存在个人项目中。
+每款至少一对同次拍摄的ARW和机内JPEG。照片路径可以相对于`samples.json`，也可以用绝对路径。`lighting`可省略。脚本检查机型、配方、可用的拍摄时间和样片覆盖，并计算文件的SHA-256。
 
 ## profiles.json
 
-每款包含`recipe`、`name`、`file`、`base`、`signature`和`uuid`。文件路径相对于机型目录，用`register_profiles.py`从制作结果生成。
+每条记录包含`recipe`、`name`、`file`、`base`、`signature`和`uuid`。`file`是相对于机型目录的XMP路径。运行`register_profiles.py`生成这些记录。XMP须嵌入RGBTable，机型限制、基础DCP名称和UUID要对得上。
 
-插件目前使用含RGBTable的XMP外观。CameraModelRestriction、基础配置、名称和UUID要相互对应，色彩表也要完整嵌入。使用其他Adobe配置格式时，需要同时调整读取、安装和SDK应用代码，并在LRC中测试。
-
-`signature`保存拍摄色彩表的摘要，可留空。它用来区分同一配方下不同的色彩表。遇到新光照时，可先按完整配方参数应用固定配置，运行记录会标为`recipe_profile`。
+`signature`是拍摄色彩表的摘要，可以留空。摘要匹配时，记录为`capture_table`。只有配方匹配时，插件会应用这款外观已有的配置，记录为`recipe_profile`。
